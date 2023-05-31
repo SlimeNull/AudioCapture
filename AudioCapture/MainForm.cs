@@ -1,6 +1,8 @@
 using System;
+using System.IO.Ports;
 using System.Windows.Forms;
 using AudioCapture.Controls;
+using AudioCapture.SerialPorts;
 using LibAudioVisualizer;
 using NAudio.CoreAudioApi;
 using NAudio.Wave;
@@ -12,6 +14,7 @@ namespace AudioCapture
         public MainForm()
         {
             InitializeComponent();
+            InitSerialPortOptions();
 
             // 设置 UI 为未初始化状态
             SetStateToNotInitailizedCapture();
@@ -21,8 +24,13 @@ namespace AudioCapture
             frequencyZoneWaveVisual.MouseWheel += WaveVisualScroll;
         }
 
+        IWaveIn? capture;                 // 采集器
         MMDevice? selectedDevice;               // 选择的采集设备
-        WasapiCapture? capture;                 // 采集器
+        string? selectedSerialPort;             // 选择的串口
+        int? selectedSerialPortBoudRate;          // 选择的串口波特率
+        int? selectedSerialPortDataBits;          // 选择的串口数据位
+        Parity? selectedSerialPortParity;         // 选择的串口校验
+        StopBits? selectedSerialPortStopBits;     // 选择的串口停止位
 
         Timer? autoTimer;                       // 计时器
         Visualizer? visualizer;                 // 可视化器
@@ -46,23 +54,32 @@ namespace AudioCapture
                 devices.Items.Add(device);
         }
 
-        private void DevicesSelectedIndexChanged(object sender, EventArgs e)
+        private void RefreshSerialPorts(object sender, EventArgs e)
         {
-            // 当选择变更时, 给 "selectedDevice" 
-            if (devices.SelectedItem is MMDevice device)
-                selectedDevice = device;
+            serialPorts.Items.Clear();
+
+            foreach (var name in SerialPort.GetPortNames())
+                serialPorts.Items.Add(name);
+        }
+
+        private void InitSerialPortOptions()
+        {
+            bauds.Items.AddRange(new object[] { 43000, 56000, 57600, 115200, 128000, 230400, 256000, 460800 });
+            bauds.SelectedIndex = 3;
+
+            dataBitsPresets.Items.AddRange(new object[] { 5, 6, 7, 8 });
+            dataBitsPresets.SelectedIndex = 3;
+
+            parities.Items.AddRange(new object[] { Parity.None, Parity.Odd, Parity.Even, Parity.Mark, Parity.Space });
+            parities.SelectedIndex = 0;
+
+            stopBitsPresets.Items.AddRange(new object[] { StopBits.One, StopBits.OnePointFive, StopBits.Two });
+            stopBitsPresets.SelectedIndex = 0;
         }
 
         private void InitCapture(object? sender, EventArgs e)
         {
             // 一大堆 if, 用户输入的数据校验
-
-            if (selectedDevice == null)
-            {
-                MessageBox.Show("Please select a device to capture", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             if (!float.TryParse(magnification.Text, out float magnificationValue))
             {
                 MessageBox.Show("Invalid magnification value, must be a float number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -106,11 +123,55 @@ namespace AudioCapture
             if (saveToFile.Checked)
                 waveFileWriter = new WaveFileWriter($"{DateTime.Now:yyMMdd-hhmmss}.wav", waveFormat);
 
-            // 初始化采集 (根据 DataFlow 决定是创建普通的捕捉还是回环捕捉)
-            if (selectedDevice.DataFlow == DataFlow.Capture)
-                capture = new WasapiCapture(selectedDevice);
+            if (!useSerialPort.Checked)
+            {
+                if (selectedDevice == null)
+                {
+                    MessageBox.Show("Please select a device to capture", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // 初始化采集 (根据 DataFlow 决定是创建普通的捕捉还是回环捕捉)
+                if (selectedDevice.DataFlow == DataFlow.Capture)
+                    capture = new WasapiCapture(selectedDevice);
+                else
+                    capture = new WasapiLoopbackCapture(selectedDevice);
+            }
             else
-                capture = new WasapiLoopbackCapture(selectedDevice);
+            {
+                if (selectedSerialPort == null)
+                {
+                    MessageBox.Show("Please select a serial port to capture", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (selectedSerialPortBoudRate == null ||
+                    selectedSerialPortDataBits == null ||
+                    selectedSerialPortParity == null ||
+                    selectedSerialPortStopBits == null)
+                {
+                    MessageBox.Show("Please configure the serial port options correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                try
+                {
+                    SerialPort serialPort =
+                        new SerialPort(
+                            selectedSerialPort,
+                            selectedSerialPortBoudRate.Value,
+                            selectedSerialPortParity.Value,
+                            selectedSerialPortDataBits.Value,
+                            selectedSerialPortStopBits.Value);
+
+                    capture = new SerialPortWaveIn(serialPort, true);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Cannot initialize serial port to capture. Exception: {ex.GetType().Name}, Message: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
 
             // 初始化采集
             capture.WaveFormat = waveFormat;
@@ -278,6 +339,12 @@ namespace AudioCapture
             enableFftAuto ^= true;
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            RefreshDevices(sender, e);
+            RefreshSerialPorts(sender, e);
+        }
+
         /// <summary>
         /// 窗体关闭时
         /// </summary>
@@ -307,6 +374,43 @@ namespace AudioCapture
 
             waveVisual.Magnification =
                 waveVisual.Magnification * MathF.Pow(10, e.Delta / 500f);
+        }
+
+        private void BaudsSelectedValueChanged(object sender, EventArgs e)
+        {
+            if (bauds.SelectedItem is int baud)
+                selectedSerialPortBoudRate = baud;
+        }
+
+        private void DataBitsPresetsSelectedValueChanged(object sender, EventArgs e)
+        {
+            if (dataBitsPresets.SelectedItem is int dataBits)
+                selectedSerialPortDataBits = dataBits;
+        }
+
+        private void ParitiesSelectedValueChanged(object sender, EventArgs e)
+        {
+            if (parities.SelectedItem is Parity parity)
+                selectedSerialPortParity = parity;
+        }
+
+        private void StopBitsPresetsSelectedValueChanged(object sender, EventArgs e)
+        {
+            if (stopBitsPresets.SelectedItem is StopBits stopBits)
+                selectedSerialPortStopBits = stopBits;
+        }
+
+        private void DevicesSelectedValueChanged(object sender, EventArgs e)
+        {
+            // 当选择变更时, 给 "selectedDevice" 
+            if (devices.SelectedItem is MMDevice device)
+                selectedDevice = device;
+        }
+
+        private void SerialPortsSelectedValueChanged(object sender, EventArgs e)
+        {
+            if (serialPorts.SelectedItem is string name)
+                selectedSerialPort = name;
         }
     }
 }

@@ -45,6 +45,18 @@ namespace AudioCapture
             fftAuto = new Button();
             disposeCapture = new Button();
             optionsGroup = new GroupBox();
+            useSerialPort = new CheckBox();
+            lbRefreshSerialPorts = new LinkLabel();
+            lbStopBits = new Label();
+            stopBitsPresets = new ComboBox();
+            lbParity = new Label();
+            parities = new ComboBox();
+            lbDataBits = new Label();
+            dataBitsPresets = new ComboBox();
+            lbBaud = new Label();
+            bauds = new ComboBox();
+            lbSerialPorts = new Label();
+            serialPorts = new ComboBox();
             lbRefreshDevices = new LinkLabel();
             lbSampleRate = new Label();
             sampleRate = new TextBox();
@@ -173,6 +185,18 @@ namespace AudioCapture
             // optionsGroup
             // 
             resources.ApplyResources(optionsGroup, "optionsGroup");
+            optionsGroup.Controls.Add(useSerialPort);
+            optionsGroup.Controls.Add(lbRefreshSerialPorts);
+            optionsGroup.Controls.Add(lbStopBits);
+            optionsGroup.Controls.Add(stopBitsPresets);
+            optionsGroup.Controls.Add(lbParity);
+            optionsGroup.Controls.Add(parities);
+            optionsGroup.Controls.Add(lbDataBits);
+            optionsGroup.Controls.Add(dataBitsPresets);
+            optionsGroup.Controls.Add(lbBaud);
+            optionsGroup.Controls.Add(bauds);
+            optionsGroup.Controls.Add(lbSerialPorts);
+            optionsGroup.Controls.Add(serialPorts);
             optionsGroup.Controls.Add(lbRefreshDevices);
             optionsGroup.Controls.Add(lbSampleRate);
             optionsGroup.Controls.Add(sampleRate);
@@ -192,6 +216,85 @@ namespace AudioCapture
             optionsGroup.Controls.Add(devices);
             optionsGroup.Name = "optionsGroup";
             optionsGroup.TabStop = false;
+            // 
+            // useSerialPort
+            // 
+            resources.ApplyResources(useSerialPort, "useSerialPort");
+            useSerialPort.Name = "useSerialPort";
+            useSerialPort.UseVisualStyleBackColor = true;
+            // 
+            // lbRefreshSerialPorts
+            // 
+            resources.ApplyResources(lbRefreshSerialPorts, "lbRefreshSerialPorts");
+            lbRefreshSerialPorts.LinkColor = Color.FromArgb(16, 63, 145);
+            lbRefreshSerialPorts.Name = "lbRefreshSerialPorts";
+            lbRefreshSerialPorts.TabStop = true;
+            lbRefreshSerialPorts.LinkClicked += RefreshSerialPorts;
+            // 
+            // lbStopBits
+            // 
+            resources.ApplyResources(lbStopBits, "lbStopBits");
+            lbStopBits.Name = "lbStopBits";
+            // 
+            // stopBitsPresets
+            // 
+            resources.ApplyResources(stopBitsPresets, "stopBitsPresets");
+            stopBitsPresets.DropDownStyle = ComboBoxStyle.DropDownList;
+            stopBitsPresets.FormattingEnabled = true;
+            stopBitsPresets.Name = "stopBitsPresets";
+            stopBitsPresets.SelectedValueChanged += StopBitsPresetsSelectedValueChanged;
+            // 
+            // lbParity
+            // 
+            resources.ApplyResources(lbParity, "lbParity");
+            lbParity.Name = "lbParity";
+            // 
+            // parities
+            // 
+            resources.ApplyResources(parities, "parities");
+            parities.DropDownStyle = ComboBoxStyle.DropDownList;
+            parities.FormattingEnabled = true;
+            parities.Name = "parities";
+            parities.SelectedValueChanged += ParitiesSelectedValueChanged;
+            // 
+            // lbDataBits
+            // 
+            resources.ApplyResources(lbDataBits, "lbDataBits");
+            lbDataBits.Name = "lbDataBits";
+            // 
+            // dataBitsPresets
+            // 
+            resources.ApplyResources(dataBitsPresets, "dataBitsPresets");
+            dataBitsPresets.DropDownStyle = ComboBoxStyle.DropDownList;
+            dataBitsPresets.FormattingEnabled = true;
+            dataBitsPresets.Name = "dataBitsPresets";
+            dataBitsPresets.SelectedValueChanged += DataBitsPresetsSelectedValueChanged;
+            // 
+            // lbBaud
+            // 
+            resources.ApplyResources(lbBaud, "lbBaud");
+            lbBaud.Name = "lbBaud";
+            // 
+            // bauds
+            // 
+            resources.ApplyResources(bauds, "bauds");
+            bauds.DropDownStyle = ComboBoxStyle.DropDownList;
+            bauds.FormattingEnabled = true;
+            bauds.Name = "bauds";
+            bauds.SelectedValueChanged += BaudsSelectedValueChanged;
+            // 
+            // lbSerialPorts
+            // 
+            resources.ApplyResources(lbSerialPorts, "lbSerialPorts");
+            lbSerialPorts.Name = "lbSerialPorts";
+            // 
+            // serialPorts
+            // 
+            resources.ApplyResources(serialPorts, "serialPorts");
+            serialPorts.DropDownStyle = ComboBoxStyle.DropDownList;
+            serialPorts.FormattingEnabled = true;
+            serialPorts.Name = "serialPorts";
+            serialPorts.SelectedValueChanged += SerialPortsSelectedValueChanged;
             // 
             // lbRefreshDevices
             // 
@@ -286,7 +389,7 @@ namespace AudioCapture
             devices.DropDownStyle = ComboBoxStyle.DropDownList;
             devices.FormattingEnabled = true;
             devices.Name = "devices";
-            devices.SelectedValueChanged += DevicesSelectedIndexChanged;
+            devices.SelectedValueChanged += DevicesSelectedValueChanged;
             // 
             // consoleGroup
             // 
@@ -309,7 +412,7 @@ namespace AudioCapture
             Controls.Add(imagePanel);
             Name = "MainForm";
             FormClosing += MainForm_FormClosing;
-            Load += RefreshDevices;
+            Load += MainForm_Load;
             splitWaveContainer.Panel1.ResumeLayout(false);
             splitWaveContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitWaveContainer).EndInit();
@@ -344,8 +447,6 @@ namespace AudioCapture
         private SplitContainer splitWaveContainer;
         private Panel timeZonePanel;
         private Panel frequencyZonePanel;
-        private Controls.WaveVisual timeZoneWaveVisual;
-        private Controls.WaveVisual frequencyZoneWaveVisual;
         private Label lbCaptureCount;
         private TextBox captureCount;
         private Label lbSampleRate;
@@ -356,5 +457,19 @@ namespace AudioCapture
         private LinkLabel lbRefreshDevices;
         private CheckBox disableEasing;
         private CheckBox disableWindow;
+        private LinkLabel lbRefreshSerialPorts;
+        private Label lbSerialPorts;
+        private ComboBox serialPorts;
+        private CheckBox useSerialPort;
+        private Label lbBaud;
+        private ComboBox bauds;
+        private Label lbDataBits;
+        private ComboBox dataBitsPresets;
+        private Label lbParity;
+        private ComboBox parities;
+        private Label lbStopBits;
+        private ComboBox stopBitsPresets;
+        private Controls.WaveVisual timeZoneWaveVisual;
+        private Controls.WaveVisual frequencyZoneWaveVisual;
     }
 }
