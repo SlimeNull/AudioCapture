@@ -1,0 +1,151 @@
+﻿<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="initCapture.Text" xml:space="preserve">
+    <value>初始化采集</value>
+  </data>
+  <data name="captureOne.Text" xml:space="preserve">
+    <value>采集一次</value>
+  </data>
+  <data name="captureAuto.Text" xml:space="preserve">
+    <value>自动连续采集</value>
+  </data>
+  <data name="fftOne.Text" xml:space="preserve">
+    <value>分析一次</value>
+  </data>
+  <data name="fftAuto.Text" xml:space="preserve">
+    <value>自动连续分析</value>
+  </data>
+  <data name="disposeCapture.Text" xml:space="preserve">
+    <value>关闭采集</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbRefreshDevices.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 25</value>
+  </data>
+  <data name="lbRefreshDevices.Text" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="lbSampleRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 25</value>
+  </data>
+  <data name="lbSampleRate.Text" xml:space="preserve">
+    <value>采样率:</value>
+  </data>
+  <data name="lbCaptureCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 25</value>
+  </data>
+  <data name="lbCaptureCount.Text" xml:space="preserve">
+    <value>采样数:</value>
+  </data>
+  <data name="lbVisualizationRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 25</value>
+  </data>
+  <data name="lbVisualizationRate.Text" xml:space="preserve">
+    <value>可视化频率:</value>
+  </data>
+  <data name="lbFrequencyZoneMagnification.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 25</value>
+  </data>
+  <data name="lbFrequencyZoneMagnification.Text" xml:space="preserve">
+    <value>频率缩放:</value>
+  </data>
+  <data name="lbMagnification.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 25</value>
+  </data>
+  <data name="lbMagnification.Text" xml:space="preserve">
+    <value>缩放:</value>
+  </data>
+  <data name="disableEasing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 29</value>
+  </data>
+  <data name="disableEasing.Text" xml:space="preserve">
+    <value>禁用缓动</value>
+  </data>
+  <data name="disableWindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 29</value>
+  </data>
+  <data name="disableWindow.Text" xml:space="preserve">
+    <value>禁用窗</value>
+  </data>
+  <data name="saveToFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 29</value>
+  </data>
+  <data name="saveToFile.Text" xml:space="preserve">
+    <value>保存到文件</value>
+  </data>
+  <data name="smoothImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 29</value>
+  </data>
+  <data name="smoothImage.Text" xml:space="preserve">
+    <value>平滑图像</value>
+  </data>
+  <data name="lbDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 25</value>
+  </data>
+  <data name="lbDevice.Text" xml:space="preserve">
+    <value>设备:</value>
+  </data>
+  <data name="optionsGroup.Text" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="consoleGroup.Text" xml:space="preserve">
+    <value>控制台</value>
+  </data>
+</root>

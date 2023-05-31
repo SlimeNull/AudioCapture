@@ -1,0 +1,906 @@
+﻿<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;frequencyZoneWaveVisual.Name" xml:space="preserve">
+    <value>frequencyZoneWaveVisual</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="frequencyZoneMagnification.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 63</value>
+  </data>
+  <data name="consoleGroup.Text" xml:space="preserve">
+    <value>Console</value>
+  </data>
+  <data name="&gt;&gt;visualizationRate.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;visualizationRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fftAuto.Text" xml:space="preserve">
+    <value>FFT Auto</value>
+  </data>
+  <data name="&gt;&gt;frequencyZoneMagnification.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;consoleGroup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="frequencyZonePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="timeZoneWaveVisual.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;lbMagnification.Name" xml:space="preserve">
+    <value>lbMagnification</value>
+  </data>
+  <data name="sampleRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>959, 63</value>
+  </data>
+  <data name="splitWaveContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1662, 616</value>
+  </data>
+  <data name="splitWaveContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="saveToFile.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbMagnification.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;splitWaveContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeZonePanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="smoothImage.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="disposeCapture.Text" xml:space="preserve">
+    <value>Close Captrue</value>
+  </data>
+  <data name="optionsGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbMagnification.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="&gt;&gt;frequencyZoneMagnification.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;splitWaveContainer.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;optionsGroup.Name" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="&gt;&gt;lbVisualizationRate.Name" xml:space="preserve">
+    <value>lbVisualizationRate</value>
+  </data>
+  <data name="captureCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 31</value>
+  </data>
+  <data name="initCapture.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="frequencyZoneMagnification.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 31</value>
+  </data>
+  <data name="disableWindow.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;imagePanel.Name" xml:space="preserve">
+    <value>imagePanel</value>
+  </data>
+  <data name="imagePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="frequencyZonePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbCaptureCount.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;fftOne.Parent" xml:space="preserve">
+    <value>consoleGroup</value>
+  </data>
+  <data name="saveToFile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;consoleGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;fftOne.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;disableEasing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbVisualizationRate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1000, 0</value>
+  </data>
+  <data name="disableWindow.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;disposeCapture.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;magnification.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="timeZonePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbMagnification.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sampleRate.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="disableEasing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;visualizationRate.Name" xml:space="preserve">
+    <value>visualizationRate</value>
+  </data>
+  <data name="&gt;&gt;frequencyZoneMagnification.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="fftOne.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 50</value>
+  </data>
+  <data name="smoothImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1315, 61</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1688, 848</value>
+  </data>
+  <data name="&gt;&gt;lbSampleRate.Name" xml:space="preserve">
+    <value>lbSampleRate</value>
+  </data>
+  <data name="timeZoneWaveVisual.Size" type="System.Drawing.Size, System.Drawing">
+    <value>833, 614</value>
+  </data>
+  <data name="initCapture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 50</value>
+  </data>
+  <data name="&gt;&gt;optionsGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="visualizationRate.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lbSampleRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>959, 33</value>
+  </data>
+  <data name="&gt;&gt;splitWaveContainer.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbRefreshDevices.Name" xml:space="preserve">
+    <value>lbRefreshDevices</value>
+  </data>
+  <data name="&gt;&gt;consoleGroup.Name" xml:space="preserve">
+    <value>consoleGroup</value>
+  </data>
+  <data name="disposeCapture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>801, 30</value>
+  </data>
+  <data name="&gt;&gt;disableEasing.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="lbDevice.Text" xml:space="preserve">
+    <value>Device:</value>
+  </data>
+  <data name="sampleRate.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;disableWindow.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="frequencyZoneWaveVisual.Size" type="System.Drawing.Size, System.Drawing">
+    <value>821, 614</value>
+  </data>
+  <data name="magnification.Text" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;devices.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="captureOne.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lbDevice.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="captureAuto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>324, 30</value>
+  </data>
+  <data name="disableEasing.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;initCapture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="timeZoneWaveVisual.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;timeZoneWaveVisual.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbVisualizationRate.Text" xml:space="preserve">
+    <value>Visualization rate:</value>
+  </data>
+  <data name="lbVisualizationRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 25</value>
+  </data>
+  <data name="&gt;&gt;lbFrequencyZoneMagnification.Name" xml:space="preserve">
+    <value>lbFrequencyZoneMagnification</value>
+  </data>
+  <data name="consoleGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1664, 88</value>
+  </data>
+  <data name="fftAuto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>642, 30</value>
+  </data>
+  <data name="&gt;&gt;magnification.Name" xml:space="preserve">
+    <value>magnification</value>
+  </data>
+  <data name="&gt;&gt;saveToFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="captureOne.Text" xml:space="preserve">
+    <value>Capture Once</value>
+  </data>
+  <data name="&gt;&gt;timeZoneWaveVisual.Type" xml:space="preserve">
+    <value>AudioCapture.Controls.WaveVisual, AudioCapture, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="captureAuto.Text" xml:space="preserve">
+    <value>Capture Auto</value>
+  </data>
+  <data name="captureCount.Text" xml:space="preserve">
+    <value>1024</value>
+  </data>
+  <data name="disableEasing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1478, 33</value>
+  </data>
+  <data name="&gt;&gt;magnification.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="disableWindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbCaptureCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 25</value>
+  </data>
+  <data name="&gt;&gt;fftOne.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;captureOne.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitWaveContainer.Panel2.Parent" xml:space="preserve">
+    <value>splitWaveContainer</value>
+  </data>
+  <data name="&gt;&gt;lbCaptureCount.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="disableEasing.Text" xml:space="preserve">
+    <value>Disable easing</value>
+  </data>
+  <data name="&gt;&gt;lbSampleRate.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="&gt;&gt;captureAuto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="saveToFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 29</value>
+  </data>
+  <data name="&gt;&gt;lbCaptureCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;smoothImage.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="frequencyZoneMagnification.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;smoothImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitWaveContainer.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;disableWindow.Name" xml:space="preserve">
+    <value>disableWindow</value>
+  </data>
+  <data name="timeZonePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;lbDevice.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="lbMagnification.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sampleRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 31</value>
+  </data>
+  <data name="lbDevice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 33</value>
+  </data>
+  <data name="&gt;&gt;splitWaveContainer.Parent" xml:space="preserve">
+    <value>imagePanel</value>
+  </data>
+  <data name="disposeCapture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 50</value>
+  </data>
+  <data name="&gt;&gt;frequencyZonePanel.Name" xml:space="preserve">
+    <value>frequencyZonePanel</value>
+  </data>
+  <data name="&gt;&gt;saveToFile.Name" xml:space="preserve">
+    <value>saveToFile</value>
+  </data>
+  <data name="&gt;&gt;fftAuto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbCaptureCount.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="lbRefreshDevices.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbVisualizationRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="captureOne.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 30</value>
+  </data>
+  <data name="&gt;&gt;lbDevice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbVisualizationRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>804, 33</value>
+  </data>
+  <data name="&gt;&gt;saveToFile.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="devices.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 61</value>
+  </data>
+  <data name="captureAuto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 50</value>
+  </data>
+  <data name="lbCaptureCount.Text" xml:space="preserve">
+    <value>Capture count</value>
+  </data>
+  <data name="&gt;&gt;initCapture.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;captureCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imagePanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbSampleRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 25</value>
+  </data>
+  <data name="captureAuto.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitWaveContainer.Panel1.Name" xml:space="preserve">
+    <value>splitWaveContainer.Panel1</value>
+  </data>
+  <data name="captureCount.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;disableWindow.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;optionsGroup.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;fftAuto.Parent" xml:space="preserve">
+    <value>consoleGroup</value>
+  </data>
+  <data name="visualizationRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 31</value>
+  </data>
+  <data name="&gt;&gt;devices.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="&gt;&gt;disposeCapture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveToFile.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;lbVisualizationRate.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="disableEasing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 29</value>
+  </data>
+  <data name="&gt;&gt;initCapture.Parent" xml:space="preserve">
+    <value>consoleGroup</value>
+  </data>
+  <data name="&gt;&gt;timeZoneWaveVisual.Name" xml:space="preserve">
+    <value>timeZoneWaveVisual</value>
+  </data>
+  <data name="&gt;&gt;sampleRate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbSampleRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;smoothImage.Name" xml:space="preserve">
+    <value>smoothImage</value>
+  </data>
+  <data name="disableWindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1478, 61</value>
+  </data>
+  <data name="imagePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1664, 618</value>
+  </data>
+  <data name="disableWindow.Text" xml:space="preserve">
+    <value>Disable window</value>
+  </data>
+  <data name="lbRefreshDevices.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 33</value>
+  </data>
+  <data name="&gt;&gt;splitWaveContainer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="imagePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="lbMagnification.Location" type="System.Drawing.Point, System.Drawing">
+    <value>426, 33</value>
+  </data>
+  <data name="captureOne.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 50</value>
+  </data>
+  <data name="fftOne.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fftOne.Name" xml:space="preserve">
+    <value>fftOne</value>
+  </data>
+  <data name="frequencyZoneWaveVisual.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 25</value>
+  </data>
+  <data name="&gt;&gt;frequencyZonePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbFrequencyZoneMagnification.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 25</value>
+  </data>
+  <data name="&gt;&gt;sampleRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbDevice.Name" xml:space="preserve">
+    <value>lbDevice</value>
+  </data>
+  <data name="lbCaptureCount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="saveToFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1315, 33</value>
+  </data>
+  <data name="lbRefreshDevices.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="frequencyZonePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;lbFrequencyZoneMagnification.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbCaptureCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1143, 33</value>
+  </data>
+  <data name="&gt;&gt;sampleRate.Name" xml:space="preserve">
+    <value>sampleRate</value>
+  </data>
+  <data name="devices.Size" type="System.Drawing.Size, System.Drawing">
+    <value>414, 33</value>
+  </data>
+  <data name="frequencyZoneMagnification.Text" xml:space="preserve">
+    <value>10000</value>
+  </data>
+  <data name="consoleGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 748</value>
+  </data>
+  <data name="saveToFile.Text" xml:space="preserve">
+    <value>Save to file</value>
+  </data>
+  <data name="&gt;&gt;captureCount.Name" xml:space="preserve">
+    <value>captureCount</value>
+  </data>
+  <data name="lbFrequencyZoneMagnification.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;fftAuto.Name" xml:space="preserve">
+    <value>fftAuto</value>
+  </data>
+  <data name="magnification.Location" type="System.Drawing.Point, System.Drawing">
+    <value>426, 63</value>
+  </data>
+  <data name="&gt;&gt;lbFrequencyZoneMagnification.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="captureCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1143, 63</value>
+  </data>
+  <data name="timeZonePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>835, 616</value>
+  </data>
+  <data name="fftOne.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 30</value>
+  </data>
+  <data name="imagePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbFrequencyZoneMagnification.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 33</value>
+  </data>
+  <data name="lbDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 25</value>
+  </data>
+  <data name="&gt;&gt;timeZonePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="devices.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;frequencyZoneWaveVisual.Parent" xml:space="preserve">
+    <value>frequencyZonePanel</value>
+  </data>
+  <data name="&gt;&gt;disableEasing.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="disposeCapture.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbVisualizationRate.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="smoothImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 29</value>
+  </data>
+  <data name="lbRefreshDevices.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 25</value>
+  </data>
+  <data name="visualizationRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>804, 63</value>
+  </data>
+  <data name="&gt;&gt;splitWaveContainer.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;optionsGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;fftAuto.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="consoleGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lbRefreshDevices.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="smoothImage.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbSampleRate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="optionsGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="optionsGroup.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="lbSampleRate.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;captureCount.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="consoleGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;imagePanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;captureOne.Name" xml:space="preserve">
+    <value>captureOne</value>
+  </data>
+  <data name="&gt;&gt;imagePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbMagnification.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 25</value>
+  </data>
+  <data name="lbMagnification.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="splitWaveContainer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbRefreshDevices.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;frequencyZoneMagnification.Name" xml:space="preserve">
+    <value>frequencyZoneMagnification</value>
+  </data>
+  <data name="lbSampleRate.Text" xml:space="preserve">
+    <value>SampleRate</value>
+  </data>
+  <data name="&gt;&gt;splitWaveContainer.Name" xml:space="preserve">
+    <value>splitWaveContainer</value>
+  </data>
+  <data name="initCapture.Text" xml:space="preserve">
+    <value>Init Capture</value>
+  </data>
+  <data name="&gt;&gt;smoothImage.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;timeZonePanel.Name" xml:space="preserve">
+    <value>timeZonePanel</value>
+  </data>
+  <data name="&gt;&gt;splitWaveContainer.Panel1.Parent" xml:space="preserve">
+    <value>splitWaveContainer</value>
+  </data>
+  <data name="splitWaveContainer.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;captureAuto.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbVisualizationRate.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;captureOne.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;frequencyZoneWaveVisual.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="frequencyZoneWaveVisual.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="initCapture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 30</value>
+  </data>
+  <data name="magnification.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;splitWaveContainer.Panel2.Name" xml:space="preserve">
+    <value>splitWaveContainer.Panel2</value>
+  </data>
+  <data name="lbFrequencyZoneMagnification.Text" xml:space="preserve">
+    <value>Frequency Magnification:</value>
+  </data>
+  <data name="fftOne.Text" xml:space="preserve">
+    <value>FFT Once</value>
+  </data>
+  <data name="frequencyZoneWaveVisual.Text" xml:space="preserve">
+    <value>waveVisual1</value>
+  </data>
+  <data name="&gt;&gt;frequencyZonePanel.Parent" xml:space="preserve">
+    <value>splitWaveContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;lbRefreshDevices.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="&gt;&gt;lbDevice.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;consoleGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;captureOne.Parent" xml:space="preserve">
+    <value>consoleGroup</value>
+  </data>
+  <data name="&gt;&gt;captureCount.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="&gt;&gt;timeZoneWaveVisual.Parent" xml:space="preserve">
+    <value>timeZonePanel</value>
+  </data>
+  <data name="disableWindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 29</value>
+  </data>
+  <data name="&gt;&gt;frequencyZoneWaveVisual.Type" xml:space="preserve">
+    <value>AudioCapture.Controls.WaveVisual, AudioCapture, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="saveToFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;timeZonePanel.Parent" xml:space="preserve">
+    <value>splitWaveContainer.Panel1</value>
+  </data>
+  <data name="smoothImage.Text" xml:space="preserve">
+    <value>Smooth Image</value>
+  </data>
+  <data name="&gt;&gt;lbRefreshDevices.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="sampleRate.Text" xml:space="preserve">
+    <value>8192</value>
+  </data>
+  <data name="splitWaveContainer.SplitterDistance" type="System.Int32, mscorlib">
+    <value>835</value>
+  </data>
+  <data name="&gt;&gt;captureAuto.Parent" xml:space="preserve">
+    <value>consoleGroup</value>
+  </data>
+  <data name="&gt;&gt;devices.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;disposeCapture.Parent" xml:space="preserve">
+    <value>consoleGroup</value>
+  </data>
+  <data name="&gt;&gt;lbCaptureCount.Name" xml:space="preserve">
+    <value>lbCaptureCount</value>
+  </data>
+  <data name="optionsGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1664, 106</value>
+  </data>
+  <data name="&gt;&gt;devices.Name" xml:space="preserve">
+    <value>devices</value>
+  </data>
+  <data name="magnification.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 31</value>
+  </data>
+  <data name="&gt;&gt;frequencyZonePanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="fftAuto.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="optionsGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 636</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>AudioCapture</value>
+  </data>
+  <data name="&gt;&gt;captureAuto.Name" xml:space="preserve">
+    <value>captureAuto</value>
+  </data>
+  <data name="frequencyZonePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>823, 616</value>
+  </data>
+  <data name="&gt;&gt;disableEasing.Name" xml:space="preserve">
+    <value>disableEasing</value>
+  </data>
+  <data name="timeZonePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbDevice.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="disableEasing.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbFrequencyZoneMagnification.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fftAuto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 50</value>
+  </data>
+  <data name="&gt;&gt;disableWindow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;initCapture.Name" xml:space="preserve">
+    <value>initCapture</value>
+  </data>
+  <data name="lbMagnification.Text" xml:space="preserve">
+    <value>Magnification:</value>
+  </data>
+  <data name="visualizationRate.Text" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;magnification.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="&gt;&gt;visualizationRate.Parent" xml:space="preserve">
+    <value>optionsGroup</value>
+  </data>
+  <data name="frequencyZoneWaveVisual.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbFrequencyZoneMagnification.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lbSampleRate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="timeZoneWaveVisual.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;disposeCapture.Name" xml:space="preserve">
+    <value>disposeCapture</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>zh</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>
