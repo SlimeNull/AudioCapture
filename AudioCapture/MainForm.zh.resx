@@ -137,109 +137,109 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="useSerialPort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 29</value>
+    <value>95, 24</value>
   </data>
   <data name="useSerialPort.Text" xml:space="preserve">
     <value>使用串口</value>
   </data>
   <data name="lbRefreshSerialPorts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
+    <value>41, 20</value>
   </data>
   <data name="lbRefreshSerialPorts.Text" xml:space="preserve">
     <value>刷新</value>
   </data>
   <data name="lbStopBits.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 25</value>
+    <value>60, 20</value>
   </data>
   <data name="lbStopBits.Text" xml:space="preserve">
     <value>停止位:</value>
   </data>
   <data name="lbParity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 25</value>
+    <value>44, 20</value>
   </data>
   <data name="lbParity.Text" xml:space="preserve">
     <value>校验:</value>
   </data>
   <data name="lbDataBits.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 25</value>
+    <value>60, 20</value>
   </data>
   <data name="lbDataBits.Text" xml:space="preserve">
     <value>数据位:</value>
   </data>
   <data name="lbBaud.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 25</value>
+    <value>60, 20</value>
   </data>
   <data name="lbBaud.Text" xml:space="preserve">
     <value>波特率:</value>
   </data>
   <data name="lbSerialPorts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 25</value>
+    <value>44, 20</value>
   </data>
   <data name="lbSerialPorts.Text" xml:space="preserve">
     <value>串口:</value>
   </data>
   <data name="lbRefreshDevices.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
+    <value>41, 20</value>
   </data>
   <data name="lbRefreshDevices.Text" xml:space="preserve">
     <value>刷新</value>
   </data>
   <data name="lbSampleRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 25</value>
+    <value>60, 20</value>
   </data>
   <data name="lbSampleRate.Text" xml:space="preserve">
     <value>采样率:</value>
   </data>
   <data name="lbCaptureCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 25</value>
+    <value>60, 20</value>
   </data>
   <data name="lbCaptureCount.Text" xml:space="preserve">
     <value>采样数:</value>
   </data>
   <data name="lbVisualizationRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 25</value>
+    <value>92, 20</value>
   </data>
   <data name="lbVisualizationRate.Text" xml:space="preserve">
     <value>可视化频率:</value>
   </data>
   <data name="lbFrequencyZoneMagnification.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 25</value>
+    <value>76, 20</value>
   </data>
   <data name="lbFrequencyZoneMagnification.Text" xml:space="preserve">
-    <value>频率缩放:</value>
+    <value>频谱缩放:</value>
   </data>
   <data name="lbMagnification.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 25</value>
+    <value>44, 20</value>
   </data>
   <data name="lbMagnification.Text" xml:space="preserve">
     <value>缩放:</value>
   </data>
   <data name="disableEasing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 29</value>
+    <value>95, 24</value>
   </data>
   <data name="disableEasing.Text" xml:space="preserve">
     <value>禁用缓动</value>
   </data>
   <data name="disableWindow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 29</value>
+    <value>79, 24</value>
   </data>
   <data name="disableWindow.Text" xml:space="preserve">
     <value>禁用窗</value>
   </data>
   <data name="saveToFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 29</value>
+    <value>111, 24</value>
   </data>
   <data name="saveToFile.Text" xml:space="preserve">
     <value>保存到文件</value>
   </data>
   <data name="smoothImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 29</value>
+    <value>95, 24</value>
   </data>
   <data name="smoothImage.Text" xml:space="preserve">
     <value>平滑图像</value>
   </data>
   <data name="lbDevice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 25</value>
+    <value>44, 20</value>
   </data>
   <data name="lbDevice.Text" xml:space="preserve">
     <value>设备:</value>
